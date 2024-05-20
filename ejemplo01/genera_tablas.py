@@ -27,10 +27,10 @@ class Club(Base):
     # Mapea la relación entre las clases
     # Club puede acceder a los jugadores asociados
     # por la llave foránea
-    jugadores = relationship("Jugador", back_populates="club")
+    jugadores = relationship("Jugador", back_populates="club") #Relación
 
     
-    def __repr__(self):
+    def __repr__(self): #Personalizar la salida del objeto
         return "Club(%d): nombre=%s deporte=%s fundación=%d" % (
                           self.id, 
                           self.nombre, 
